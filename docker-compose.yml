@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+    webapp:
+        build: ./frontend/webapp
+        image: starter-webapp
+    reverse-proxy:
+        build: dev-tools/compose-reverse-proxy
+        image: starter-dev-reverse-proxy
+        depends_on:
+            - webapp
+        ports:
+            - 30000:80
+        
