@@ -3,11 +3,15 @@ services:
     webapp:
         build: ./frontend/webapp
         image: starter-webapp
+    service:
+        build: ./backend/service
+        image: starter-backend-service
     reverse-proxy:
         build: dev-tools/compose-reverse-proxy
         image: starter-dev-reverse-proxy
         depends_on:
             - webapp
+            - service
         ports:
             - 30000:80
         
