@@ -3,9 +3,13 @@ services:
     webapp:
         build: ./frontend/webapp
         image: starter-webapp
+        ports:
+            - 80:8080
     service:
         build: ./backend/service
         image: starter-backend-service
+        ports:
+            - 3001:3001
     reverse-proxy:
         build: dev-tools/compose-reverse-proxy
         image: starter-dev-reverse-proxy

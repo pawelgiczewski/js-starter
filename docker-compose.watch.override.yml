@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  webapp:
+    build:
+      dockerfile: Dockerfile-watch
+    volumes:
+        - ./frontend/webapp:/usr/src/app
+  service:
+    build:
+      dockerfile: Dockerfile-watch
+    volumes:
+        - ./backend/service:/usr/src/app
+         

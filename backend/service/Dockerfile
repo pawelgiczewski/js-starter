@@ -1,4 +1,4 @@
-FROM node:12.16-alpine as builder
+FROM node:12.16-alpine
 
 USER root
 WORKDIR /usr/src/app
@@ -7,5 +7,5 @@ RUN npm install
 COPY . /usr/src/app
 RUN npm run build
 
-EXPOSE 80
+EXPOSE 3001
 CMD ["node", "dist/main.js"]
