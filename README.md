@@ -3,6 +3,7 @@ Starter template for containerized web project
 
 - frontend framework -> Vue.js
 - backend framework -> Nest.js
+- database -> MongoDb
 
 ## Docker compose for local development
 
@@ -10,6 +11,7 @@ apps served:
 ```
 frontend -> http://localhost:30000
 backend -> http://localhost:30000/api/v1
+mongo-express -> http://localhost:8085
 ```
 
 ### Test | Demo
